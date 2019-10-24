@@ -1,0 +1,6 @@
+.App {
+  max-width: 1230px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}

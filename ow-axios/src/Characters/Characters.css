@@ -1,0 +1,12 @@
+.character {
+    border: 1px solid black;
+    text-align: left;
+    padding: 10px;
+    width: 155px;
+    margin: 20px auto;
+    display: inline-block;
+}
+
+.character:hover {
+    cursor: pointer;
+}
