@@ -1,0 +1,10 @@
+.container {
+    display: flex;
+    margin-top: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .row {
+    justify-content: center;
+}

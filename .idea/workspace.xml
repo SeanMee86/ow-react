@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="25cfb363-c890-465c-ac43-112e45f6e846" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ow-axios/src/Info/Info.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ow-axios/src/Info/Info.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ow-axios/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/ow-axios/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ow-axios/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/ow-axios/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ow-axios/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/ow-axios/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,13 +18,14 @@
     </execution>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/ow-axios" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1PZzWbVKt7L4avKiAE77Q8A7KQ0" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../react-complete-guide" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -59,7 +58,10 @@
       <workItem from="1566096440080" duration="980000" />
       <workItem from="1571860887797" duration="1245000" />
       <workItem from="1571865488438" duration="12000" />
-      <workItem from="1571936151988" duration="4164000" />
+      <workItem from="1571936151988" duration="5034000" />
+      <workItem from="1571956972762" duration="718000" />
+      <workItem from="1571957967919" duration="10000" />
+      <workItem from="1572025321949" duration="5091000" />
     </task>
     <servers />
   </component>

@@ -1,6 +1,11 @@
 .App {
   max-width: 1230px;
   margin: auto;
+}
+
+.characterContainer {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }

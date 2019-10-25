@@ -1,12 +1,16 @@
 .character {
-    border: 1px solid black;
-    text-align: left;
-    padding: 10px;
-    width: 155px;
-    margin: 20px auto;
+    border-radius: 25px;
+    border: 1px solid lightgrey;
+    width: 85px;
+    margin: 8px;
     display: inline-block;
 }
 
 .character:hover {
     cursor: pointer;
+}
+
+.character img {
+    width: 100%;
+    border-radius: 25px;
 }

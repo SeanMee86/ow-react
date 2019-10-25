@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import axios from 'axios';
 import Characters from './Characters/Characters';
 import Info from './Info/Info';
+import Header from './Header/Header';
 import './App.css';
 
 class App extends Component {
@@ -15,19 +16,25 @@ class App extends Component {
     }
 
     getCharacters = async () => {
-        // axios
-        //     .get('https://overwatch-api.net/api/v1/hero')
-        //     .then(res => this.setState({ characters: res.data.data }))
-        //     .catch(err => console.log(err));
         let response = await axios.get('https://overwatch-api.net/api/v1/hero');
         let { data } = response.data;
         this.setState({characters: data});
-        console.log(this.state);
     };
 
-    loadCharacter = (id) => {
-        this.setState({characterSelect: this.state.characters[id-1]});
+    fixCharacterName = (characterName) => {
+        switch(characterName){
+            case 'lcio':
+                return 'lucio';
+            case 'torbjrn':
+                return 'torbjorn';
+            case 'soldier76':
+                return 'soldier-76';
+            default:
+                return characterName;
+        }
     };
+
+    loadCharacter = id => this.setState({characterSelect: this.state.characters[id-1]});
 
     showInfo = () => {
         if(this.state.characters.length > 0){
@@ -48,17 +55,21 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                {this.state.characters.length === 0 ? (
-                    <div>Loading...</div>
-                ) : (
-                    this.state.characters.map((character, ind) => {
-                        return <Characters
-                            click={this.loadCharacter}
-                            hero={character.id}
-                            key={ind}
-                            content={character.name}/>
-                    })
-                )}
+                <Header/>
+                <hr/>
+                <div className={'characterContainer'}>
+                    {this.state.characters.length === 0 ? (
+                        <div>Loading...</div>
+                    ) : (
+                        this.state.characters.map((character, ind) => {
+                            return <Characters
+                                click={this.loadCharacter}
+                                hero={character.id}
+                                key={ind}
+                                content={this.fixCharacterName(character.name.replace(/[^\w-]/g, '').toLowerCase())}/>
+                        })
+                    )}
+                </div>
                 {this.showInfo()}
             </div>
         );
