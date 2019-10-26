@@ -8,7 +8,9 @@ import './App.css';
 class App extends Component {
     state = {
         characters: [],
-        characterSelect: {}
+        characterCache: [],
+        characterSelect: {},
+        isClickable: true
     };
 
     componentDidMount() {
@@ -16,9 +18,23 @@ class App extends Component {
     }
 
     getCharacters = async () => {
-        let response = await axios.get('https://overwatch-api.net/api/v1/hero');
-        let { data } = response.data;
-        this.setState({characters: data});
+        if(this.state.characterCache.length === 0) {
+            let response = await axios.get('https://overwatch-api.net/api/v1/hero');
+            let {data} = response.data;
+            this.setState({
+                characters: data,
+                characterCache: data,
+                characterSelect: {}
+            });
+            console.log(this.state.characterCache);
+        }else{
+            let data = this.state.characterCache;
+            this.setState({
+                characters: data,
+                characterSelect: {},
+                isClickable: true
+            })
+        }
     };
 
     fixCharacterName = (characterName) => {
@@ -34,19 +50,27 @@ class App extends Component {
         }
     };
 
-    loadCharacter = id => this.setState({characterSelect: this.state.characters[id-1]});
+    loadCharacter = id => {
+        this.setState({
+            characterSelect: this.state.characters[id-1],
+            characters: [this.state.characters[id-1]],
+            isClickable: false
+        });
+    };
 
     showInfo = () => {
         if(this.state.characters.length > 0){
             return (
                 Object.entries(this.state.characterSelect).length === 0
                 &&
-                this.state.characterSelect.constructor === Object ?
+                this.state.characterSelect.constructor === Object
+                &&
+                this.state.isClickable ?
                 (
                     <div className={'info'}>Please select a character...</div>
                 ) :
                 (
-                    <Info content={this.state.characterSelect}/>
+                    <Info click={this.getCharacters} content={this.state.characterSelect}/>
                 )
             )
         }
@@ -63,7 +87,9 @@ class App extends Component {
                     ) : (
                         this.state.characters.map((character, ind) => {
                             return <Characters
-                                click={this.loadCharacter}
+                                actionToTake={this.state.isClickable}
+                                loadSingleChar={this.loadCharacter}
+                                loadAllChars={this.getCharacters}
                                 hero={character.id}
                                 key={ind}
                                 content={this.fixCharacterName(character.name.replace(/[^\w-]/g, '').toLowerCase())}/>
