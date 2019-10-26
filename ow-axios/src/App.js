@@ -8,7 +8,8 @@ import './App.css';
 class App extends Component {
     state = {
         characters: [],
-        characterSelect: {}
+        characterSelect: {},
+        isClickable: false
     };
 
     componentDidMount() {
@@ -18,7 +19,10 @@ class App extends Component {
     getCharacters = async () => {
         let response = await axios.get('https://overwatch-api.net/api/v1/hero');
         let { data } = response.data;
-        this.setState({characters: data});
+        this.setState({
+          characters: data,
+          isClickable: true
+        });
     };
 
     fixCharacterName = (characterName) => {
@@ -34,7 +38,12 @@ class App extends Component {
         }
     };
 
-    loadCharacter = id => this.setState({characterSelect: this.state.characters[id-1]});
+    loadCharacter = id => {
+        this.setState({
+            characterSelect: this.state.characters[id-1],
+            characters: [this.state.characters[id-1]]
+        });
+    }
 
     showInfo = () => {
         if(this.state.characters.length > 0){
@@ -46,7 +55,7 @@ class App extends Component {
                     <div className={'info'}>Please select a character...</div>
                 ) :
                 (
-                    <Info content={this.state.characterSelect}/>
+                    <Info click={this.getCharacters} content={this.state.characterSelect}/>
                 )
             )
         }
