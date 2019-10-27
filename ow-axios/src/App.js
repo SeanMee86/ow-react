@@ -9,7 +9,6 @@ class App extends Component {
     state = {
         characters: [],
         characterCache: [],
-        characterSelect: {},
         isClickable: true
     };
 
@@ -24,14 +23,11 @@ class App extends Component {
             this.setState({
                 characters: data,
                 characterCache: data,
-                characterSelect: {}
             });
-            console.log(this.state.characterCache);
         }else{
             let data = this.state.characterCache;
             this.setState({
                 characters: data,
-                characterSelect: {},
                 isClickable: true
             })
         }
@@ -52,36 +48,28 @@ class App extends Component {
 
     loadCharacter = id => {
         this.setState({
-            characterSelect: this.state.characters[id-1],
             characters: [this.state.characters[id-1]],
             isClickable: false
         });
     };
 
-    showInfo = () => {
-        if(this.state.characters.length > 0){
-            return (
-                Object.entries(this.state.characterSelect).length === 0
-                &&
-                this.state.characterSelect.constructor === Object
-                &&
-                this.state.isClickable ?
-                (
-                    <div className={'info'}>Please select a character...</div>
-                ) :
-                (
-                    <Info click={this.getCharacters} content={this.state.characterSelect}/>
-                )
-            )
-        }
-    };
+    showInfo = () => this.state.characters.length === 1 ? (
+      <Info
+        click={this.getCharacters}
+        content={this.state.characters[0]}/>
+    ) : (
+      <div className="info">Please select a character...</div>
+    );
 
     render() {
+        const style = {
+            justifyContent: this.state.characters.length === 1 ? "flex-start" : "center"
+        }
         return (
             <div className="App">
                 <Header/>
                 <hr/>
-                <div className={'characterContainer'}>
+                <div style={style} className={'characterContainer'}>
                     {this.state.characters.length === 0 ? (
                         <div>Loading...</div>
                     ) : (
