@@ -46,11 +46,19 @@ class App extends Component {
         }
     };
 
-    loadCharacter = id => {
+    loadCharacter = async index => {
+        const id = index-1;
+        if(!this.state.characterCache[id].data) {
+            let response = await axios.get(this.state.characters[id].url);
+            let newCache = [...this.state.characterCache];
+            newCache[id].data = response.data;
+            this.setState({characterCache: newCache});
+        }
         this.setState({
-            characters: [this.state.characters[id-1]],
+            characters: [this.state.characters[id]],
             isClickable: false
         });
+        window.scrollTo(0,0);
     };
 
     showInfo = () => this.state.characters.length === 1 ? (
