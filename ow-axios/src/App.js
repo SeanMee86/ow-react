@@ -3,7 +3,7 @@ import axios from 'axios';
 import Characters from './Characters/Characters';
 import Info from './Info/Info';
 import Header from './Header/Header';
-import './App.css';
+import './App.scss';
 
 class App extends Component {
     state = {
@@ -58,13 +58,13 @@ class App extends Component {
         click={this.getCharacters}
         content={this.state.characters[0]}/>
     ) : (
-      <div className="info">Please select a character...</div>
+      <div className="charSelect">Please select a character...</div>
     );
 
     render() {
         const style = {
             justifyContent: this.state.characters.length === 1 ? "flex-start" : "center"
-        }
+        };
         return (
             <div className="App">
                 <Header/>

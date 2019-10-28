@@ -4,13 +4,13 @@
     width: 85px;
     margin: 8px;
     display: inline-block;
-}
 
-.character:hover {
-    cursor: pointer;
-}
+    img {
+        width: 100%;
+        border-radius: 25px;
+    }
 
-.character img {
-    width: 100%;
-    border-radius: 25px;
+    &:hover {
+        cursor: pointer;
+    }
 }

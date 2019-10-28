@@ -1,0 +1,32 @@
+@font-face {
+  font-family: 'OW-font';
+  src: local('OW-font'), url("./Fonts/bignoodletitling/big_noodle_titling.ttf");
+}
+
+body {
+  font-family: 'OW-font';
+  font-size: 22px;
+
+  @media screen and (max-width: 500px) {
+    margin-bottom: 20px;
+  }
+
+  .App {
+    max-width: 1230px;
+    margin: auto;
+
+    .characterContainer {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    button {
+      &.btn.btn-outline-primary {
+        font-size: 22px;
+      }
+    }
+  }
+}
+
+

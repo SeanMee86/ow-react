@@ -1,9 +1,10 @@
 import React from 'react';
-import './Characters.css';
+import './Characters.scss';
 
 const characters = props => {
     const style = {
-        width: "150px"
+        width: "150px",
+        margin: "10px 35px"
     };
     return (
         <div style={!props.actionToTake ? style : null} onClick={() => props.actionToTake ? props.loadSingleChar(props.hero) : props.loadAllChars()} className={'character'}>
