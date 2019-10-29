@@ -8,7 +8,7 @@ const header = (props) => {
     return (
         <div className={'container'}>
             <div className={'row'}>
-                <img style={style} src="/4683761209687671824_1.png" alt=""/>
+                <img style={style} src="./4683761209687671824_1.png" alt=""/>
             </div>
         </div>
     )

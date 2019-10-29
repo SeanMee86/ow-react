@@ -50,9 +50,9 @@ class App extends Component {
         const id = index-1;
         if(!this.state.characterCache[id].data) {
             let response = await axios.get(this.state.characters[id].url);
-            let newCache = [...this.state.characterCache];
-            newCache[id].data = response.data;
-            this.setState({characterCache: newCache});
+            let characterCache = [...this.state.characterCache];
+            characterCache[id].data = response.data;
+            this.setState({characterCache});
         }
         this.setState({
             characters: [this.state.characters[id]],
