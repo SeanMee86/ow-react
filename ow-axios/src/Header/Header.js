@@ -1,10 +1,10 @@
 import React from 'react';
-import './Header.css';
+import './Header.scss';
 
 const header = (props) => {
   const style = {
     width: "100%"
-  }
+  };
     return (
         <div className={'container'}>
             <div className={'row'}>

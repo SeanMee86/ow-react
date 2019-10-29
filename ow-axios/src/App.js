@@ -3,7 +3,7 @@ import axios from 'axios';
 import Characters from './Characters/Characters';
 import Info from './Info/Info';
 import Header from './Header/Header';
-import './App.css';
+import './App.scss';
 
 class App extends Component {
     state = {
@@ -46,11 +46,19 @@ class App extends Component {
         }
     };
 
-    loadCharacter = id => {
+    loadCharacter = async index => {
+        const id = index-1;
+        if(!this.state.characterCache[id].data) {
+            let response = await axios.get(this.state.characters[id].url);
+            let newCache = [...this.state.characterCache];
+            newCache[id].data = response.data;
+            this.setState({characterCache: newCache});
+        }
         this.setState({
-            characters: [this.state.characters[id-1]],
+            characters: [this.state.characters[id]],
             isClickable: false
         });
+        window.scrollTo(0,0);
     };
 
     showInfo = () => this.state.characters.length === 1 ? (
@@ -58,13 +66,13 @@ class App extends Component {
         click={this.getCharacters}
         content={this.state.characters[0]}/>
     ) : (
-      <div className="info">Please select a character...</div>
+      <div className="charSelect">Please select a character...</div>
     );
 
     render() {
         const style = {
             justifyContent: this.state.characters.length === 1 ? "flex-start" : "center"
-        }
+        };
         return (
             <div className="App">
                 <Header/>

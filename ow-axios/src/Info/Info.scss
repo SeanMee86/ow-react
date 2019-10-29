@@ -1,0 +1,10 @@
+.info,
+.charSelect {
+    margin: 20px;
+}
+
+@media screen and (max-width: 500px) {
+    .info {
+        margin: 0;
+    }
+}
