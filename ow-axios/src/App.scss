@@ -7,6 +7,12 @@ body {
   font-family: 'OW-font';
   font-size: 22px;
   min-height: 100vh;
+  color: white;
+  background: black;
+
+  hr {
+    border-color: white;
+  }
 
   @media screen and (max-width: 500px) {
     margin-bottom: 20px;
