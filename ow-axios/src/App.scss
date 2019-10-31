@@ -7,6 +7,7 @@ body {
   font-family: 'OW-font';
   font-size: 22px;
   min-height: 100vh;
+  margin-bottom: 20px;
   color: white;
   background: black;
 
@@ -22,10 +23,18 @@ body {
     max-width: 1230px;
     margin: auto;
 
+    .charSelect {
+      margin-left: 20px;
+    }
+
     .characterContainer {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
+
+      @media screen and (min-width: 700px) {
+        float: left;
+      }
     }
 
     button {

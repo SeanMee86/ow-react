@@ -1,6 +1,12 @@
-.info,
-.charSelect {
-    margin: 20px;
+.info {
+    z-index: -1;
+
+    .abilities {
+        @media screen and (min-width: 700px) {
+            clear: both;
+            margin-top: 35px;
+        }
+    }
 }
 
 @media screen and (max-width: 500px) {

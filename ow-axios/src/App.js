@@ -65,9 +65,7 @@ class App extends Component {
       <Info
         click={this.getCharacters}
         content={this.state.characters[0]}/>
-    ) : (
-      <div className="charSelect">Please select a character...</div>
-    );
+    ) : null;
 
     render() {
         const style = {
@@ -77,9 +75,10 @@ class App extends Component {
             <div className="App">
                 <Header/>
                 <hr/>
+                {this.state.isClickable ? <div className={'charSelect'}>select your hero...</div> : null}
                 <div style={style} className={'characterContainer'}>
                     {this.state.characters.length === 0 ? (
-                        <div>Loading...</div>
+                        <div style={{marginLeft: "20px"}}>Loading...</div>
                     ) : (
                         this.state.characters.map((character, ind) => {
                             return <Characters
@@ -93,6 +92,7 @@ class App extends Component {
                     )}
                 </div>
                 {this.showInfo()}
+                {!this.state.isClickable ? <button style={{marginLeft: "14px"}} onClick={() => this.getCharacters()} className="btn btn-outline-primary">Return to Character Select</button> : null}
             </div>
         );
     }

@@ -4,7 +4,7 @@ import './Characters.scss';
 const characters = props => {
     const style = {
         width: "150px",
-        margin: "10px 35px"
+        margin: "10px 25px 10px 15px"
     };
     return (
         <div style={!props.actionToTake ? style : null} onClick={() => props.actionToTake ? props.loadSingleChar(props.hero) : props.loadAllChars()} className={'character'}>
