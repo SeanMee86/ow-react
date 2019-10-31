@@ -9,7 +9,8 @@ class App extends Component {
     state = {
         characters: [],
         characterCache: [],
-        isClickable: true
+        isClickable: true,
+        limitReached: false
     };
 
     componentDidMount() {
@@ -18,12 +19,16 @@ class App extends Component {
 
     getCharacters = async () => {
         if(this.state.characterCache.length === 0) {
-            let response = await axios.get('https://overwatch-api.net/api/v1/hero');
-            let {data} = response.data;
-            this.setState({
-                characters: data,
-                characterCache: data,
-            });
+            try{
+                let response = await axios.get('https://overwatch-api.net/api/v1/hero');
+                let {data} = response.data;
+                this.setState({
+                    characters: data,
+                    characterCache: data,
+                });
+            }catch(error) {
+                this.setState({limitReached: true})
+            }
         }else{
             let data = this.state.characterCache;
             this.setState({
@@ -71,14 +76,18 @@ class App extends Component {
         const style = {
             justifyContent: this.state.characters.length === 1 ? "flex-start" : "center"
         };
+        const marginLeft = {
+            marginLeft: "20px"
+        };
         return (
             <div className="App">
                 <Header/>
                 <hr/>
                 {this.state.isClickable ? <div className={'charSelect'}>select your hero...</div> : null}
                 <div style={style} className={'characterContainer'}>
-                    {this.state.characters.length === 0 ? (
-                        <div style={{marginLeft: "20px"}}>Loading...</div>
+                    {this.state.limitReached ? (<div style={marginLeft}>The hourly limit has been reached please try back later.</div>) : null}
+                    {this.state.characters.length === 0 && !this.state.limitReached ? (
+                        <div style={marginLeft}>Loading...</div>
                     ) : (
                         this.state.characters.map((character, ind) => {
                             return <Characters
@@ -92,7 +101,7 @@ class App extends Component {
                     )}
                 </div>
                 {this.showInfo()}
-                {!this.state.isClickable ? <button style={{marginLeft: "14px"}} onClick={() => this.getCharacters()} className="btn btn-outline-primary">Return to Character Select</button> : null}
+                {!this.state.isClickable ? <button style={marginLeft} onClick={() => this.getCharacters()} className="btn btn-outline-primary">Return to Character Select</button> : null}
             </div>
         );
     }
