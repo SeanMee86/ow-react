@@ -2,13 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="86047274-7c2b-456f-b539-60f14b901d21" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/ow-axios/src/api/server.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ow-axios/src/characters.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ow-axios/src/setupProxy.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ow-axios/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/ow-axios/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ow-axios/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/ow-axios/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ow-axios/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/ow-axios/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ow-axios/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/ow-axios/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ow-axios/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/ow-axios/src/App.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ow-axios/src/Characters/Characters.js" beforeDir="false" afterPath="$PROJECT_DIR$/ow-axios/src/Characters/Characters.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ow-axios/src/Info/Info.js" beforeDir="false" afterPath="$PROJECT_DIR$/ow-axios/src/Info/Info.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ow-axios/src/Info/Info.scss" beforeDir="false" afterPath="$PROJECT_DIR$/ow-axios/src/Info/Info.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,7 +29,7 @@
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../react-complete-guide" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -64,6 +64,8 @@
       <updated>1572369535488</updated>
       <workItem from="1572369537464" duration="3434000" />
       <workItem from="1572542449703" duration="3250000" />
+      <workItem from="1583327854286" duration="8000" />
+      <workItem from="1583327891997" duration="5170000" />
     </task>
     <servers />
   </component>
@@ -75,7 +77,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

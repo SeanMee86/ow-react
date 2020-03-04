@@ -27,7 +27,8 @@ class App extends Component {
                     characterCache: data,
                 });
             }catch(error) {
-                this.setState({limitReached: true})
+                this.setState({limitReached: true});
+                console.log(JSON.stringify(error));
             }
         }else{
             let data = this.state.characterCache;
@@ -36,6 +37,11 @@ class App extends Component {
                 isClickable: true
             })
         }
+    };
+
+    checkServer = async () => {
+        const response = await axios.get("/api");
+        console.log(response);
     };
 
     fixCharacterName = (characterName) => {
@@ -102,6 +108,7 @@ class App extends Component {
                 </div>
                 {this.showInfo()}
                 {!this.state.isClickable ? <button style={marginLeft} onClick={() => this.getCharacters()} className="btn btn-outline-primary">Return to Character Select</button> : null}
+                <button onClick={() => this.checkServer()}>Check Server</button>
             </div>
         );
     }
