@@ -5,7 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/setupProxy.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/setupProxy.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -73,7 +72,9 @@
       <workItem from="1583327854286" duration="8000" />
       <workItem from="1583327891997" duration="5170000" />
       <workItem from="1583339976798" duration="9520000" />
-      <workItem from="1583353504335" duration="1610000" />
+      <workItem from="1583353504335" duration="2884000" />
+      <workItem from="1583359936760" duration="14000" />
+      <workItem from="1583360508011" duration="3130000" />
     </task>
     <servers />
   </component>

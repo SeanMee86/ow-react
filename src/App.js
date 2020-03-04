@@ -41,7 +41,13 @@ class App extends Component {
 
     checkServer = async () => {
         const response = await axios.get("/api");
-        console.log(response);
+        this.setState({
+            characters: response.data
+        })
+    };
+
+    checkState = () => {
+        console.log(this.state);
     };
 
     getHeroes = async () => {
@@ -113,8 +119,12 @@ class App extends Component {
                 </div>
                 {this.showInfo()}
                 {!this.state.isClickable ? <button style={marginLeft} onClick={() => this.getCharacters()} className="btn btn-outline-primary">Return to Character Select</button> : null}
-                <button onClick={() => this.checkServer()}>Check Server</button>
+                <br/>
+                <button onClick={() => this.checkServer()}>Add to Database</button>
+                <br/>
                 <button onClick={() => this.getHeroes()}>Log Heroes</button>
+                <br/>
+                <button onClick={() => this.checkState()}>Check State</button>
             </div>
         );
     }

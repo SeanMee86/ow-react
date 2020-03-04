@@ -42,47 +42,48 @@ app.get('/heroes', (req, res) => {
 app.get('/api/v1/hero', (req, res) => {
     (async () => {
         const connector = mongoose.connect(process.env.CONNECTION_STRING);
-        const id = 3;
+        const id = 5;
 
         let hero = await connector.then(async () => {
             return findOneHero(id)
         });
 
         if(!hero) {
-            hero = await createHero({
+            createHero({
                 id,
-                name: 'Soldier 76',
-                picture_name: 'soldier-76',
-                description: 'Armed with cutting-edge weaponry, including an experimental pulse rifle that’s capable of firing spirals of high-powered Helix Rockets, Soldier: 76 has the speed and support know-how of a highly trained warrior.',
-                age: 0,
-                affiliation: 'Overwatch',
-                base_of_operations: 'Unknown',
+                name: 'Baptiste',
+                description: 'Baptiste wields an assortment of experimental devices and weaponry to keep allies alive and eliminate threats under fierce conditions. A battle-hardened combat medic, he is just as capable of saving lives as he is taking out the enemy.',
+                age: 36,
+                affiliation: 'Caribbean Coalition',
+                base_of_operations: 'Tortuga, Haiti',
                 abilities: [
                     {
-                        name: 'HEAVY PULSE RIFLE',
-                        description: 'Soldier: 76’s rifle remains particularly steady while unloading fully-automatic pulse fire.',
+                        name: 'BIOTIC LAUNCHER',
+                        description: 'Baptiste’s three-round-burst Biotic Launcher rewards accuracy and recoil control with significant damage output. It also doubles as a healing device, lobbing projectiles that heal allies near the point of impact.',
                         is_ultimate: false
                     }, {
-                        name: 'HELIX ROCKETS',
-                        description: 'Tiny rockets spiral out of Soldier: 76’s Pulse Rifle in a single burst. The rockets’ explosion damages enemies in a small radius.',
+                        name: 'REGENERATIVE BURST',
+                        description: 'Baptiste activates an intense regenerative burst that heals himself and nearby allies over time.',
                         is_ultimate: false
                     }, {
-                        name: 'SPRINT',
-                        description: `Whether he needs to evade a firefight or get back into one, Soldier: 76 can rush ahead in a burst of speed. His sprint ends if he takes an action other than charging forward.`,
-                        is_ultimate: false
-                    },{
-                        name: 'BIOTIC FIELD',
-                        description: `Soldier: 76 plants a biotic emitter on the ground. Its energy projection restores health to 76 and any of his squadmates within the field.`,
+                        name: 'IMMORTALITY FIELD',
+                        description: `Baptiste uses a device to create a field that prevents allies from dying. The generator can be destroyed.`,
                         is_ultimate: false
                     }, {
-                        name: 'TACTICAL VISOR',
-                        description: `Soldier: 76’s pinpoint targeting visor “locks” his aim on the threat closest to his crosshairs. If an enemy leaves his line of sight, Soldier: 76 can quickly switch to another target.`,
+                        name: 'AMPLIFICATION MATRIX',
+                        description: `Baptiste creates a matrix that doubles the damage and healing effects of friendly projectiles that pass through it.`,
                         is_ultimate: true
+                    }, {
+                        name: 'EXO BOOTS',
+                        description: `By first crouching, Baptiste can jump higher.`,
+                        is_ultimate: false
                     }
                 ]
-            })
+            }).then(async () => {
+                const heroes = await findAllHeroes();
+                res.send(heroes);
+            });
         }
-        console.log(hero);
     })();
 });
 
