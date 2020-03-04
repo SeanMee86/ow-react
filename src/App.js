@@ -20,8 +20,8 @@ class App extends Component {
     getCharacters = async () => {
         if(this.state.characterCache.length === 0) {
             try{
-                let response = await axios.get('https://overwatch-api.net/api/v1/hero');
-                let {data} = response.data;
+                let response = await axios.get('/heroes');
+                let {data} = response;
                 this.setState({
                     characters: data,
                     characterCache: data,
@@ -41,6 +41,11 @@ class App extends Component {
 
     checkServer = async () => {
         const response = await axios.get("/api");
+        console.log(response);
+    };
+
+    getHeroes = async () => {
+        const response = await axios.get("/heroes");
         console.log(response);
     };
 
@@ -109,6 +114,7 @@ class App extends Component {
                 {this.showInfo()}
                 {!this.state.isClickable ? <button style={marginLeft} onClick={() => this.getCharacters()} className="btn btn-outline-primary">Return to Character Select</button> : null}
                 <button onClick={() => this.checkServer()}>Check Server</button>
+                <button onClick={() => this.getHeroes()}>Log Heroes</button>
             </div>
         );
     }

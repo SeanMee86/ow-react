@@ -2,44 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="86047274-7c2b-456f-b539-60f14b901d21" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/old files/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api/heroSchema.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/old files/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ow-axios/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ow-axios/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ow-axios/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ow-axios/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ow-axios/public/4683761209687671824_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/4683761209687671824_1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ow-axios/public/Overwatch_circle_logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/Overwatch_circle_logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ow-axios/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ow-axios/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ow-axios/public/logo192.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/logo192.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ow-axios/public/logo512.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/logo512.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ow-axios/public/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ow-axios/public/overwatch-logo-icon-28.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/overwatch-logo-icon-28.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ow-axios/public/robots.txt" beforeDir="false" afterPath="$PROJECT_DIR$/public/robots.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ow-axios/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ow-axios/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ow-axios/src/App.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ow-axios/src/Characters/Characters.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Characters/Characters.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ow-axios/src/Characters/Characters.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Characters/Characters.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ow-axios/src/Fonts/bignoodletitling/Sentinel_Type_Freefont_EULA.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fonts/bignoodletitling/Sentinel_Type_Freefont_EULA.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ow-axios/src/Fonts/bignoodletitling/big_noodle_titling.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fonts/bignoodletitling/big_noodle_titling.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ow-axios/src/Fonts/bignoodletitling/big_noodle_titling.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fonts/bignoodletitling/big_noodle_titling.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ow-axios/src/Fonts/bignoodletitling/big_noodle_titling_oblique.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fonts/bignoodletitling/big_noodle_titling_oblique.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ow-axios/src/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Header/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ow-axios/src/Header/Header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Header/Header.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ow-axios/src/Info/Info.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Info/Info.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ow-axios/src/Info/Info.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Info/Info.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ow-axios/src/api/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ow-axios/src/characters.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/characters.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ow-axios/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ow-axios/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ow-axios/src/logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/logo.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ow-axios/src/serviceWorker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/serviceWorker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ow-axios/src/setupProxy.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/setupProxy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ow-axios/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/setupProxy.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/setupProxy.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -73,8 +39,10 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\seanm\Documents\code\ow-react\src\api" />
+      <recent name="C:\Users\seanm\Documents\code\ow-react\src" />
       <recent name="C:\Users\seanm\Documents\code\ow-react" />
+      <recent name="C:\Users\seanm\Documents\code\ow-react\client" />
+      <recent name="C:\Users\seanm\Documents\code\ow-react\src\api" />
       <recent name="C:\Users\seanm\Documents\code\ow-react\old files" />
     </key>
   </component>
@@ -104,7 +72,8 @@
       <workItem from="1572542449703" duration="3250000" />
       <workItem from="1583327854286" duration="8000" />
       <workItem from="1583327891997" duration="5170000" />
-      <workItem from="1583339976798" duration="9198000" />
+      <workItem from="1583339976798" duration="9520000" />
+      <workItem from="1583353504335" duration="1610000" />
     </task>
     <servers />
   </component>

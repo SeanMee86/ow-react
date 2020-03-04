@@ -10,5 +10,13 @@ module.exports = function(app) {
                 '^/api': '/api/v1/hero'
             }
         })
+    );
+
+    app.use(
+        "/heroes",
+        createProxyMiddleware({
+            target: "http://localhost:4000",
+            changeOrigin: true,
+        })
     )
 };

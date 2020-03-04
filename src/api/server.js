@@ -22,8 +22,22 @@ async function findOneHero(id) {
     return Hero.findOne({id});
 }
 
+async function findAllHeroes() {
+    return Hero.find({});
+}
+
 app.use(express.json());
 app.use(express.urlencoded());
+
+app.get('/heroes', (req, res) => {
+    (async () => {
+        const connector = mongoose.connect(process.env.CONNECTION_STRING);
+        let heroes = await connector.then(async () => {
+            return findAllHeroes()
+        });
+        res.send(heroes);
+    })()
+});
 
 app.get('/api/v1/hero', (req, res) => {
     (async () => {
@@ -36,7 +50,7 @@ app.get('/api/v1/hero', (req, res) => {
 
         if(!hero) {
             hero = await createHero({
-                id: 3,
+                id,
                 name: 'Soldier 76',
                 picture_name: 'soldier-76',
                 description: 'Armed with cutting-edge weaponry, including an experimental pulse rifle that’s capable of firing spirals of high-powered Helix Rockets, Soldier: 76 has the speed and support know-how of a highly trained warrior.',
