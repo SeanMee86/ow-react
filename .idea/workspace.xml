@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="86047274-7c2b-456f-b539-60f14b901d21" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Characters/CharacterInfo/CharacterInfo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Characters/CharacterInfo/CharacterInfo.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Characters/CharacterSelect/CharacterSelect.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Characters/CharacterSelect/CharacterSelect.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Characters/Characters.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Characters/Characters.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Info/Info.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Info/Info.scss" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/server.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -90,6 +80,7 @@
       <workItem from="1583359936760" duration="14000" />
       <workItem from="1583360508011" duration="3130000" />
       <workItem from="1583376150555" duration="3344000" />
+      <workItem from="1583422002369" duration="408000" />
     </task>
     <servers />
   </component>

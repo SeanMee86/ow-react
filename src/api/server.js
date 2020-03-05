@@ -3,6 +3,7 @@ const app = express();
 const mongoose = require('mongoose');
 const heroSchema = require('./heroSchema');
 const Hero = mongoose.model('hero', heroSchema, 'hero');
+const port = process.env.PORT || 4000;
 require('dotenv').config();
 
 async function createHero(hero) {
@@ -22,9 +23,9 @@ async function findOneHero(id) {
     return Hero.findOne({id});
 }
 
-async function findAllHeroes() {
+findAllHeroes = async () => {
     return Hero.find({});
-}
+};
 
 app.use(express.json());
 app.use(express.urlencoded());
@@ -87,4 +88,4 @@ app.get('/api/v1/hero', (req, res) => {
     })();
 });
 
-app.listen(4000, () => console.log(`Listening on Port: 4000`));
+app.listen(port, () => console.log(`Listening on Port: ${port}`));
