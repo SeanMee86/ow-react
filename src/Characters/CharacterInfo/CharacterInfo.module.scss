@@ -1,0 +1,44 @@
+.info {
+  .topInfoContainer {
+    display: flex;
+
+    @media screen and (max-width: 767px) {
+      flex-direction: column;
+    }
+
+    .image {
+      margin-right: 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      @media screen and (max-width: 767px) {
+        margin-right: 0;
+        margin-bottom: 20px
+      }
+    }
+
+    .topInfo {
+      display: flex;
+      justify-content: center;
+      flex-direction:column;
+    }
+  }
+
+  .abilities {
+    @media screen and (min-width: 700px) {
+      clear: both;
+      margin-top: 35px;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .info {
+    margin: 0;
+  }
+}

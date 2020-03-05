@@ -32,7 +32,7 @@ app.use(express.urlencoded());
 app.get('/heroes', (req, res) => {
     (async () => {
         const connector = mongoose.connect(process.env.CONNECTION_STRING);
-        let heroes = await connector.then(async () => {
+        const heroes = await connector.then(async () => {
             return findAllHeroes()
         });
         res.send(heroes);
@@ -44,7 +44,7 @@ app.get('/api/v1/hero', (req, res) => {
         const connector = mongoose.connect(process.env.CONNECTION_STRING);
         const id = 6;
 
-        let hero = await connector.then(async () => {
+        const hero = await connector.then(async () => {
             return findOneHero(id)
         });
 
@@ -85,10 +85,6 @@ app.get('/api/v1/hero', (req, res) => {
             });
         }
     })();
-});
-
-app.post('/api/v1/hero', (req, res) => {
-    console.log(req);
 });
 
 app.listen(4000, () => console.log(`Listening on Port: 4000`));
