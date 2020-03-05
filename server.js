@@ -3,7 +3,7 @@ const app = express();
 const mongoose = require('mongoose');
 const heroSchema = require('./heroSchema');
 const Hero = mongoose.model('hero', heroSchema, 'hero');
-const port = process.env.PORT || 4000;
+const path = require('path');
 require('dotenv').config();
 
 async function createHero(hero) {
@@ -87,5 +87,15 @@ app.get('/api/v1/hero', (req, res) => {
         }
     })();
 });
+
+if(process.env.NODE_ENV === 'production') {
+    app.use(express.static('/client/build'));
+
+    app.get('*', (req, res) => {
+        res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
+    })
+}
+
+const port = process.env.PORT || 4000;
 
 app.listen(port, () => console.log(`Listening on Port: ${port}`));
