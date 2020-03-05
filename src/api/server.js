@@ -42,7 +42,7 @@ app.get('/heroes', (req, res) => {
 app.get('/api/v1/hero', (req, res) => {
     (async () => {
         const connector = mongoose.connect(process.env.CONNECTION_STRING);
-        const id = 5;
+        const id = 6;
 
         let hero = await connector.then(async () => {
             return findOneHero(id)
@@ -51,32 +51,32 @@ app.get('/api/v1/hero', (req, res) => {
         if(!hero) {
             createHero({
                 id,
-                name: 'Baptiste',
-                description: 'Baptiste wields an assortment of experimental devices and weaponry to keep allies alive and eliminate threats under fierce conditions. A battle-hardened combat medic, he is just as capable of saving lives as he is taking out the enemy.',
-                age: 36,
-                affiliation: 'Caribbean Coalition',
-                base_of_operations: 'Tortuga, Haiti',
+                name: 'Bastion',
+                description: 'Repair protocols and the ability to transform between stationary Assault, mobile Recon and devastating Tank configurations provide Bastion with a high probability of victory.',
+                age: 30,
+                affiliation: 'None',
+                base_of_operations: 'Unknown',
                 abilities: [
                     {
-                        name: 'BIOTIC LAUNCHER',
-                        description: 'Baptiste’s three-round-burst Biotic Launcher rewards accuracy and recoil control with significant damage output. It also doubles as a healing device, lobbing projectiles that heal allies near the point of impact.',
+                        name: 'CONFIGURATION: RECON',
+                        description: 'In Recon mode, Bastion is fully mobile, outfitted with a submachine gun that fires steady bursts of bullets at medium range.',
                         is_ultimate: false
                     }, {
-                        name: 'REGENERATIVE BURST',
-                        description: 'Baptiste activates an intense regenerative burst that heals himself and nearby allies over time.',
+                        name: 'CONFIGURATION: SENTRY',
+                        description: 'In Sentry mode, Bastion is a stationary powerhouse equipped with a gatling gun capable of unleashing a hail of bullets. The gun\'s aim can be "walked" across multiple targets, dealing devastating damage at short to medium range.',
                         is_ultimate: false
                     }, {
-                        name: 'IMMORTALITY FIELD',
-                        description: `Baptiste uses a device to create a field that prevents allies from dying. The generator can be destroyed.`,
+                        name: 'RECONFIGURE',
+                        description: `Bastion transforms between its two primary combat modes to adapt to battlefield conditions.`,
                         is_ultimate: false
                     }, {
-                        name: 'AMPLIFICATION MATRIX',
-                        description: `Baptiste creates a matrix that doubles the damage and healing effects of friendly projectiles that pass through it.`,
+                        name: 'SELF-REPAIR',
+                        description: `Bastion restores its health; it cannot fire weapons while the repair process is in effect.`,
+                        is_ultimate: false
+                    }, {
+                        name: 'CONFIGURATION: TANK',
+                        description: `In Tank mode, Bastion extends wheeled treads and a powerful long-range cannon. The cannon’s explosive shells demolish targets in a wide blast radius, but Bastion can only remain in this mode for a limited time.`,
                         is_ultimate: true
-                    }, {
-                        name: 'EXO BOOTS',
-                        description: `By first crouching, Baptiste can jump higher.`,
-                        is_ultimate: false
                     }
                 ]
             }).then(async () => {
