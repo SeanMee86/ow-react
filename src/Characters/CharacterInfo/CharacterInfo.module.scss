@@ -9,8 +9,11 @@
     .image {
       margin-right: 25px;
       display: flex;
-      justify-content: center;
       align-items: center;
+
+      img {
+        border-radius: 10px;
+      }
 
       &:hover {
         cursor: pointer;

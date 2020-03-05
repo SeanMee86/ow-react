@@ -8,7 +8,7 @@ import './App.scss';
 class App extends Component {
     state = {
         characters: [],
-        limitReached: false,
+        loadFailed: false,
         characterSelected: {
             selected: false,
             character: null
@@ -19,10 +19,6 @@ class App extends Component {
         await this.getCharacters();
     }
 
-    toSelectScreen = () => {
-        this.setState({characterSelected: {selected: false}})
-    };
-
     getCharacters = async () => {
         try{
             const response = await axios.get('/heroes');
@@ -31,9 +27,13 @@ class App extends Component {
                 characters: data,
             });
         }catch(error) {
-            this.setState({limitReached: true});
+            this.setState({loadFailed: true});
             console.log(JSON.stringify(error));
         }
+    };
+
+    toSelectScreen = () => {
+        this.setState({characterSelected: {selected: false}})
     };
 
     characterSelect = (character) => {
@@ -65,13 +65,13 @@ class App extends Component {
 
                 <div style={style} className={'characterContainer'}>
                     {
-                        this.state.limitReached ?
+                        this.state.loadFailed ?
                             <div style={marginLeft}>The hourly limit has been reached please try back later.</div> :
                             null
                     }
 
                     {
-                        this.state.characters.length === 0 && !this.state.limitReached ?
+                        this.state.characters.length === 0 && !this.state.loadFailed ?
                             <div style={marginLeft}>Loading...</div> :
                         !this.state.characterSelected.selected ?
                             <CharacterSelect
