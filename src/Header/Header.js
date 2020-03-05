@@ -1,7 +1,7 @@
 import React from 'react';
 import './Header.scss';
 
-const header = (props) => {
+const header = () => {
   const style = {
     width: "100%"
   };
