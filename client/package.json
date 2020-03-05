@@ -5,10 +5,6 @@
   "homepage": "https://seanmeedevworld.com/ow-heroes",
   "dependencies": {
     "axios": "^0.19.0",
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1",
-    "http-proxy-middleware": "^1.0.1",
-    "mongoose": "^5.9.3",
     "node-sass": "^4.13.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
