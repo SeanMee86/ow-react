@@ -2,9 +2,10 @@
   "name": "ow-axios",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://serene-waters-49515.herokuapp.com/",
+  "homepage": "https://seanmeedevworld.com/ow-heroes",
   "dependencies": {
     "axios": "^0.19.0",
+    "http-proxy-middleware": "^1.0.1",
     "node-sass": "^4.13.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
