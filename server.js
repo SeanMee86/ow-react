@@ -30,14 +30,6 @@ findAllHeroes = async () => {
 app.use(express.json());
 app.use(express.urlencoded());
 
-if(process.env.NODE_ENV === 'production') {
-    app.use(express.static(path.join(__dirname,'/client/build')));
-
-    app.get('*', (req, res) => {
-        res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
-    })
-}
-
 app.get('/heroes', (req, res) => {
     (async () => {
         const connector = mongoose.connect(process.env.CONNECTION_STRING);
@@ -47,6 +39,14 @@ app.get('/heroes', (req, res) => {
         res.send(heroes);
     })()
 });
+
+if(process.env.NODE_ENV === 'production') {
+    app.use(express.static(path.join(__dirname,'/client/build')));
+
+    app.get('*', (req, res) => {
+        res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
+    })
+}
 
 app.get('/api/v1/hero', (req, res) => {
     (async () => {
